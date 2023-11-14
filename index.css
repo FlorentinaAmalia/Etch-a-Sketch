@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+#sketch-container {
+    width: 800px;
+    height: 800px;
+    background-color: rgb(228, 228, 228);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    border: 1px solid rgb(54, 54, 54);
+}
