@@ -9,7 +9,7 @@ let sketchContainer = document.getElementById("sketch-container");
 
 let sketchChild = document.querySelectorAll("#sketch-container div");
 sketchChild.forEach(elem => {
-    elem.addEventListener("mouseover", () => {
+    elem.addEventListener("mouseenter", () => {
         elem.style.backgroundColor = color.value;
     })
 })
@@ -30,7 +30,7 @@ sizeElement.addEventListener("keyup", () => {
         for (let i = 0; i < size**2; i++) {
             const newDiv = document.createElement("div");
             sketchContainer.appendChild(newDiv);
-            newDiv.addEventListener("mouseover", () => {
+            newDiv.addEventListener("mouseenter", () => {
                 newDiv.style.backgroundColor = color.value;
             });
         }

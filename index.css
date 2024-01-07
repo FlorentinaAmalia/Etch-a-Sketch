@@ -2,12 +2,61 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 1.2rem;
+    color: #023047;
+    background-color: #e9c46a;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container * {
+    transition: .2s;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+input[type="text"] {
+    padding: 5px;
+}
+
 #sketch-container {
-    width: 800px;
-    height: 800px;
+    /*width: 800px;*/
+    /*height: 800px;*/
+    width: 70vw;
+    height: 70vh;
     background-color: rgb(228, 228, 228);
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    border: 1px solid rgb(54, 54, 54);
+    border: 0px solid black;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+}
+
+@media (max-width: 500px) {
+    #sketch-container {
+        width: 90vw;
+        height: 85vh;
+    }
+
+    .settings {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }
